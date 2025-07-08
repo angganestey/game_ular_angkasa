@@ -1,0 +1,68 @@
+
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Ular Luar Angkasa</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <h1 style="margin-bottom: 0.5rem; text-align: center;">Game Ular Luar Angkasa</h1>
+    
+    <div class="control-panel">
+        <div class="score-board">
+            Skor: <span id="score">0</span> | Level: <span id="level">1</span>
+        </div>
+        <div class="toggle-container">
+            <span>Mode Gelap</span>
+            <label class="toggle-switch">
+                <input type="checkbox" id="dark-mode-toggle" checked>
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Suara</span>
+            <label class="toggle-switch">
+                <input type="checkbox" id="sound-toggle" checked>
+                <span class="slider"></span>
+            </label>
+        </div>
+    </div>
+
+    <div class="game-container">
+        <div id="game-board">
+            <div class="board-bg"></div>
+        </div>
+        <div class="game-over" id="game-over">
+            <h2>Permainan Selesai!</h2>
+            <p>Skor Akhir: <span id="final-score">0</span></p>
+            <button id="restart-btn">Main Lagi</button>
+        </div>
+    </div>
+
+    <div class="difficulty-selector">
+        <label for="difficulty" style="font-weight: bold;">Tingkat Kesulitan:</label>
+        <select id="difficulty" style="flex-grow: 1;">
+            <option value="150">Mudah</option>
+            <option value="120" selected>Normal</option>
+            <option value="80">Sulit</option>
+            <option value="60">Ekstrim</option>
+        </select>
+    </div>
+
+    <div class="instructions">
+        <p style="margin: 0;">SELAMAT BERMAIN JANGAN LUPA FOLLOW @MS.ANGGARA46</p>
+    </div>
+
+    <audio id="eat-sound" src="makan.mp3" preload="auto"></audio>
+    <audio id="mulaigame" src="mulaigame.mp3" preload="auto"></audio>
+    <audio id="gameover-sound" src="game-over.mp3" preload="auto"></audio>
+    <audio id="bg-music" src="Lady Gaga Bruno Mars - Die With A Smile.mp3" loop preload="auto"></audio> 
+    <audio id="crash-sound" src="tabrakan.mp3" preload="auto"></audio> 
+    <audio id="levelup-sound" src="levelup.mp3" preload="auto"></audio> 
+
+    <script src="script.js"></script>
+</body>
+</html>
